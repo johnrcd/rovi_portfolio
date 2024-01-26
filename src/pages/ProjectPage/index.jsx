@@ -1,4 +1,3 @@
-import MainNavigationBar from "../../components/MainNavigationBar";
 import data from "../ProjectPage/projects.json";
 import Project from "./Project";
 

@@ -1,4 +1,5 @@
 .main_navigation_bar{
+    display: absolute;
     margin: auto;
     margin-top: 2%;
 }

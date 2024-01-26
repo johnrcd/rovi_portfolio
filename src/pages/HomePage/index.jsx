@@ -1,6 +1,3 @@
-import { Outlet, Link } from "react-router-dom";
-
-import MainNavigationBar from "../../components/MainNavigationBar";
 import Footer from "../../components/Footer";
 import FirstWindow from "./FirstWindow";
 import TechnicalSkills from "../../components/TechnicalSkills";
@@ -17,6 +14,7 @@ function HomePage(){
             <div>
                 <FirstWindow />
             </div>
+            <div id="about_me"></div>
             <ul className="home_page_content">
                 <li className="home_page_section">
                     <h2>
@@ -32,6 +30,7 @@ function HomePage(){
                         Nowadays, my programming is significantly less game-oriented. I'm currently in the Business Information Technology program at Red River College Polytechnic, where I'm learning about IT and software development.
                     </p>
                 </li>
+                <div id="projects"></div> {/* anchor for HomeNavigationBar*/}
                 <li className="home_page_section">
                     <h2>
                         <div className="quiet_header_text">// </div>
@@ -71,11 +70,8 @@ function HomePage(){
                         skills={["React", "CRA", "HTML", "CSS"]}
                     />
                 </li>
-                <li className="home_page_section">
-                    <h2>
-                        <div className="quiet_header_text">// </div>
-                        contact
-                    </h2>
+                <li className="home_page_section" id="contact">
+                    <h2>contact</h2>
                     <hr/>
                     <p>
                         While I'm currently busy studying at RRC Polytech, I'm open to any inquiries, new opportunities, or just a friendly chat. Feel free to reach out to me at johnrcd.ar@gmail.com!

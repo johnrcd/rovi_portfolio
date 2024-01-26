@@ -8,14 +8,14 @@
 }
 .home_page ul.home_page_content li.home_page_section{
     width: 100%;
-    margin: 50vh 0 0 0;
+    margin: 45vh 0 5vh 0;
     list-style-type: none;
     list-style-position: outside;
     border-color: var(--color-accent);
 }
 
 .home_page ul.home_page_content li.home_page_section:first-child{
-    margin: 0;
+    margin: 25vh 0 25vh 0;
 }
 
 .home_page ul.home_page_content a.home_page_image_link img{
