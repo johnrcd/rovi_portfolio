@@ -2,7 +2,7 @@
     position: absolute;
     animation: fadeInAnimation 2500ms linear, MoveUpDown 2s ease-in-out infinite;
     text-align: center;
-    bottom: 5vh;
+    bottom: 10vh;
     width: 100%;
 }
 

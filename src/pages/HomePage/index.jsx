@@ -1,6 +1,3 @@
-import { Outlet, Link } from "react-router-dom";
-
-import MainNavigationBar from "../../components/MainNavigationBar";
 import Footer from "../../components/Footer";
 import FirstWindow from "./FirstWindow";
 import TechnicalSkills from "../../components/TechnicalSkills";
@@ -17,7 +14,7 @@ function HomePage(){
             <div>
                 <FirstWindow />
             </div>
-            <div id="anchor_about_me"></div>
+            <div id="about_me"></div>
             <ul className="home_page_content">
                 <li className="home_page_section">
                     <h2>
