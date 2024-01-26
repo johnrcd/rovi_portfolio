@@ -7,10 +7,12 @@ import "./styles.css";
 import img_monospace from "/monospace_banner.png";
 import img_instalocked_inc from "/instalocked_inc_banner.png";
 import img_valorant_lfg from "/valorant_lfg_banner.png";
+import HomeNavigationBar from "./HomeNavigationBar";
 
 function HomePage(){
     return(
-        <div className="home_page">
+        <div className="home_page" id="landing">
+            <HomeNavigationBar />
             <div>
                 <FirstWindow />
             </div>

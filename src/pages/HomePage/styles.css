@@ -15,7 +15,7 @@
 }
 
 .home_page ul.home_page_content li.home_page_section:first-child{
-    margin: 25vh 0 25vh 0;
+    margin: 30vh 0 20vh 0;
 }
 
 .home_page ul.home_page_content a.home_page_image_link img{
@@ -54,6 +54,10 @@
        screen and (max-height: 480px) {
     .home_page ul.home_page_content {
         padding: 0 5px;
+    }
+
+    .home_page ul.home_page_content li.home_page_section:first-child{
+        margin: 10vh 0 25vh 0;
     }
 }
 
