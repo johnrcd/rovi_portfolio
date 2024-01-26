@@ -7,10 +7,12 @@ export default function HomeNavigationBar(){
         <>
             <nav className="main_navigation_bar">
                 <ul className="main_navigation_bar_list">
-                    <li><Link to="/" className="main_navigation_link">home</Link></li>
-                    <li><Link to="/#about_me" className="main_navigation_link">about</Link></li>
-                    <li><Link to="/#projects" className="main_navigation_link">projects</Link></li>
+                    <li className="main_navigation_link"><p>&#91;</p></li>
+                    <li><Link to="/#landing" className="main_navigation_link">home,</Link></li>
+                    <li><Link to="/#about_me" className="main_navigation_link">about,</Link></li>
+                    <li><Link to="/#projects" className="main_navigation_link">projects,</Link></li>
                     <li><Link to="/#contact" className="main_navigation_link">contact</Link></li>
+                    <li className="main_navigation_link"><p>&#93;</p></li>
                 </ul>
             </nav>
             <Outlet />
