@@ -30,6 +30,7 @@ function HomePage(){
                         Nowadays, my programming is significantly less game-oriented. I'm currently in the Business Information Technology program at Red River College Polytechnic, where I'm learning about IT and software development.
                     </p>
                 </li>
+                <div id="projects"></div> {/* anchor for HomeNavigationBar*/}
                 <li className="home_page_section">
                     <h2>
                         <div className="quiet_header_text">// </div>
@@ -69,7 +70,7 @@ function HomePage(){
                         skills={["React", "CRA", "HTML", "CSS"]}
                     />
                 </li>
-                <li className="home_page_section" id="anchor_contact">
+                <li className="home_page_section" id="contact">
                     <h2>contact</h2>
                     <hr/>
                     <p>

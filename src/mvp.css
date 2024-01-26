@@ -32,11 +32,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* commenting this out probably breaks some form of accessibility guidelines
+ * but i just want the smooth scrolling to always work
+ */
+/*
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
     }
 }
+*/
 
 /* Layout */
 article aside {
