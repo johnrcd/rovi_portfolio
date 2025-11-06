@@ -2,4 +2,30 @@
 title: test
 ---
 
-<p>Hello world </p>
+<p>{{ site_data.intro.name }}</p>
+<p>{{ site_data.intro.subtitle }}</p>
+
+{% for paragraph in site_data.about %}
+	<p>{{ paragraph | safe }}</p>
+{% endfor %}
+
+{% for project in site_data.projects.main %}
+	<p>{{ project.name }}</p>
+	<p>{{ project.description }}</p>
+	<ul>
+	{% for tag in project.tags %}
+		<li>{{ tag }}</li>
+	{% endfor %}
+	</ul>
+{% endfor %}
+
+{% for project in site_data.projects.secondary %}
+	<p>{{ project.name }}</p>
+	<p>{{ project.description }}</p>
+	<ul>
+	{% for tag in project.tags %}
+		<li>{{ tag }}</li>
+	{% endfor %}
+	</ul>
+{% endfor %}
+

@@ -1,0 +1,72 @@
+intro:
+  name: Rovi Decena
+  subtitle: Software Developer
+
+about:
+  - Hi, I'm Rovi! I write code for apps, websites, and games.
+
+  - I first started programming because I was interested in making games,
+    though I ended up figuring out that I liked coding a little more than
+    everything else.
+
+  - For inquiries, questions, or anything else, the best way to contact me
+    is through my <a href="mailto:johnrcd.ar@gmail.com">email</a>.
+
+projects:
+  main:
+    - name: Lume
+      description:
+      - "MIDI-based audio visualizer that generates graphics in real-time.
+        Runs as a website, able to run directly on the web."
+      tags:
+        - TypeScript
+        - Vite
+        - Vitest
+        - p5.js
+
+    - name: Taskboard
+      description:
+      - "Full-stack web application that acts as a ticket tracker for my
+        personal projects. Submit bug reports, request new features, or
+        suggest new projects to work on."
+      tags:
+        - React
+        - Django (DRF)
+        - Tailwind CSS
+
+  secondary:
+    - name: Monospace
+      description:
+      - "2D platformer about a mouse trying to get home."
+      tags:
+        - Unity
+
+    - name: Personal Blog
+      description:
+      - "Blog about projects I'm working on, typically related to programming,
+        game development, music, or a combination thereof."
+    - tags:
+      - Eleventy/11ty
+
+contact:
+  links:
+    - name: Email
+      long: johnrcd.ar@gmail.com
+      short: johnrcd.ar@gmail.com
+      url: mailto:johnrcd.ar@gmail.com
+
+    - name: LinkedIn
+      long: linkedin.com/in/rovi-decena/
+      short: /in/rovi-decena/
+      url: https://www.linkedin.com/in/rovi-decena/
+
+    - name: Bluesky
+      long: bsky.app/profile/rovidecena.com
+      short: "@rovidecena.com"
+      url: https://bsky.app/profile/rovidecena.com
+
+  special:
+    name: All Links
+    long: linktr.ee/johnrcd
+    short: linktr.ee/johnrcd
+    url: https://linktr.ee/johnrcd
