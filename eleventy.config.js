@@ -8,6 +8,8 @@ import markdownItAnchor from "markdown-it-anchor";
 
 import pluginFilters from "./_config/filters.js";
 
+import YAML from "yaml";
+
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
@@ -123,6 +125,7 @@ export default async function(eleventyConfig) {
 	);
 
 	eleventyConfig.setLibrary("md", markdownLib);
+	eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
 
 	// Features to make your build faster (when you need them)
 
