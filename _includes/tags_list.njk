@@ -1,8 +1,0 @@
-<ul>
-	{% for tag in collections | getKeys | filterTagList | sortAlphabetically %}
-		{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-		<li>
-			<a href="{{ tagUrl }}">{{ tag }}</a>
-		</li>
-	{% endfor %}
-</ul>
