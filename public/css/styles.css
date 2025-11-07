@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	/* font-family: "Red Hat Display", sans-serif; */
+	font-family: "Inter Tight", sans-serif;
+	font-optical-sizing: auto;
+	/* font-weight: <weight>; */
+	font-style: normal;
+}
+
+hr {
+	/* https://usgraphics.com/ */
+	background: radial-gradient(#777 .5px, transparent 1px) 0 0 / 3px 3px, transparent;
+	border: none;
+	height: 1rem;
+	max-height: 1rem;
+	/* margin-bottom: 2rem; */
+}
+
+#content {
+	max-width: 60ch;
+	margin: 2rem auto;
+	border: 1px solid #888;
+	background: #FFF;
+	padding: 1rem;
+}
+
+h1 {
+	margin: 0;
+}
+
+body {
+	background: #EEEEEE;
+}
+

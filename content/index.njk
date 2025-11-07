@@ -2,30 +2,73 @@
 title: test
 ---
 
-<p>{{ site_data.intro.name }}</p>
+<h1>{{ site_data.intro.name }}</h1>
 <p>{{ site_data.intro.subtitle }}</p>
+
+<hr />
+
+<h2>about</h2>
 
 {% for paragraph in site_data.about %}
 	<p>{{ paragraph | safe }}</p>
 {% endfor %}
 
-{% for project in site_data.projects.main %}
-	<p>{{ project.name }}</p>
-	<p>{{ project.description }}</p>
-	<ul>
-	{% for tag in project.tags %}
-		<li>{{ tag }}</li>
-	{% endfor %}
-	</ul>
-{% endfor %}
+<h2>projects</h2>
 
-{% for project in site_data.projects.secondary %}
-	<p>{{ project.name }}</p>
-	<p>{{ project.description }}</p>
-	<ul>
-	{% for tag in project.tags %}
-		<li>{{ tag }}</li>
+<ul class="mainProjects">
+	{% for project in site_data.projects.main %}
+		<li class="mainProjects__entry">
+			<h3 class="mainProjects__name">
+				{{ project.name }}
+			</h3>
+			<p class="mainProjects__name">
+				{{ project.description }}
+			</p>
+			<ul class="tags">
+			{% for tag in project.tags %}
+				<li class="tags__entry">{{ tag }}</li>
+			{% endfor %}
+			</ul>
+		</li>
 	{% endfor %}
-	</ul>
-{% endfor %}
+</ul>
+
+<ul class="secondaryProjects">
+	{% for project in site_data.projects.secondary %}
+		<li class="secondaryProjects__entry">
+			<h3 class="secondaryProjects__name">
+				{{ project.name }}
+			</h3>
+			<p class="msecondaryProjects__name">
+				{{ project.description }}
+			</p>
+			<ul class="tags">
+			{% for tag in project.tags %}
+				<li class="tags__entry">{{ tag }}</li>
+			{% endfor %}
+			</ul>
+		</li>
+	{% endfor %}
+</ul>
+
+<h2>contact</h2>
+
+<ul class="contact">
+	{% for contact in site_data.contact.links %}
+		<li class="contact__entry">
+			{{ contact.name }}:
+			<a href="{{ contact.url }}">
+					{{ contact.short }}
+			</a>
+		</li>
+	{% endfor %}
+	<li class="contact__entry" aria-hidden="true" ></li>
+	<li class="contact__entry">
+			{{ site_data.contact.special.name }}:
+			<a href="{{ site_data.contact.special.url }}">
+					{{ site_data.contact.special.short }}
+			</a>
+	</li>
+</ul>
+<hr>
 

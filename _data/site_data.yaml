@@ -16,8 +16,8 @@ projects:
   main:
     - name: Lume
       description:
-      - "MIDI-based audio visualizer that generates graphics in real-time.
-        Runs as a website, able to run directly on the web."
+        - "MIDI-based audio visualizer that generates graphics in real-time.
+          Runs as a website, able to run directly on the web."
       tags:
         - TypeScript
         - Vite
@@ -26,9 +26,9 @@ projects:
 
     - name: Taskboard
       description:
-      - "Full-stack web application that acts as a ticket tracker for my
-        personal projects. Submit bug reports, request new features, or
-        suggest new projects to work on."
+        - "Full-stack web application that acts as a ticket tracker for my
+          personal projects. Submit bug reports, request new features, or
+          suggest new projects to work on."
       tags:
         - React
         - Django (DRF)
@@ -37,16 +37,22 @@ projects:
   secondary:
     - name: Monospace
       description:
-      - "2D platformer about a mouse trying to get home."
+        - "2D platformer about a mouse trying to get home."
       tags:
         - Unity
 
     - name: Personal Blog
       description:
-      - "Blog about projects I'm working on, typically related to programming,
-        game development, music, or a combination thereof."
-    - tags:
-      - Eleventy/11ty
+        - "Blog about projects I'm working on, typically related to programming,
+          game development, music, or a combination thereof."
+      tags:
+        - Eleventy/11ty
+
+    - name: ULTRAVIOLET
+      description:
+        - "Website for ULTRAVIOLET, a band that I'm in."
+      tags:
+        - Eleventy/11ty
 
 contact:
   links:
