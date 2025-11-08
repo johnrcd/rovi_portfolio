@@ -1,0 +1,20 @@
+<ul class="contact">
+	{% for contact in site_data.contact.links %}
+		<li class="contact__entry">
+			<span class="contact__name">{{ contact.name }}</span>:
+			<a href="{{ contact.url }}">
+					{{ contact.short }}
+			</a>
+		</li>
+	{% endfor %}
+	<li class="contact__space">empty space</li>
+	<li class="contact__entry">
+		<span class="contact__name">
+			{{ site_data.contact.special.name }}:
+		</span>
+		<a href="{{ site_data.contact.special.url }}">
+				{{ site_data.contact.special.short }}
+		</a>
+	</li>
+</ul>
+<hr>

@@ -2,73 +2,49 @@
 title: test
 ---
 
-<h1>{{ site_data.intro.name }}</h1>
-<p>{{ site_data.intro.subtitle }}</p>
+<header class="header">
+	<h1 class="header__title">
+		{{ site_data.intro.name }}
+	</h1>
+	<p class="header__subtitle">
+		{{ site_data.intro.subtitle }}
+	</p>
+</header>
 
-<hr />
+<div class="panelSegment">
+	<div class="panelSegment__header">
+		<h2 class="panelSegmenet__title">01. about</h2>
+	</div>
+	<section class="panelSegment__content aboutMe">
+		{% for paragraph in site_data.about %}
+			<p>{{ paragraph | safe }}</p>
+		{% endfor %}
+	</section>
+</div>
 
-<h2>about</h2>
+<div class="panelSegment">
+	<div class="panelSegment__header">
+		<h2 class="panelSegmenet__title">02. projects</h2>
+	</div>
+	<section class="panelSegment__content">
+		{% include "lists/main_projects.njk" %}
+	</section>
+</div>
 
-{% for paragraph in site_data.about %}
-	<p>{{ paragraph | safe }}</p>
-{% endfor %}
+<div class="panelSegment">
+	<div class="panelSegment__header">
+		<h2 class="panelSegmenet__title">03. other stuff</h2>
+	</div>
+	<section class="panelSegment__content">
+		{% include "lists/secondary_projects.njk" %}
+	</section>
+</div>
 
-<h2>projects</h2>
-
-<ul class="mainProjects">
-	{% for project in site_data.projects.main %}
-		<li class="mainProjects__entry">
-			<h3 class="mainProjects__name">
-				{{ project.name }}
-			</h3>
-			<p class="mainProjects__name">
-				{{ project.description }}
-			</p>
-			<ul class="tags">
-			{% for tag in project.tags %}
-				<li class="tags__entry">{{ tag }}</li>
-			{% endfor %}
-			</ul>
-		</li>
-	{% endfor %}
-</ul>
-
-<ul class="secondaryProjects">
-	{% for project in site_data.projects.secondary %}
-		<li class="secondaryProjects__entry">
-			<h3 class="secondaryProjects__name">
-				{{ project.name }}
-			</h3>
-			<p class="msecondaryProjects__name">
-				{{ project.description }}
-			</p>
-			<ul class="tags">
-			{% for tag in project.tags %}
-				<li class="tags__entry">{{ tag }}</li>
-			{% endfor %}
-			</ul>
-		</li>
-	{% endfor %}
-</ul>
-
-<h2>contact</h2>
-
-<ul class="contact">
-	{% for contact in site_data.contact.links %}
-		<li class="contact__entry">
-			{{ contact.name }}:
-			<a href="{{ contact.url }}">
-					{{ contact.short }}
-			</a>
-		</li>
-	{% endfor %}
-	<li class="contact__entry" aria-hidden="true" ></li>
-	<li class="contact__entry">
-			{{ site_data.contact.special.name }}:
-			<a href="{{ site_data.contact.special.url }}">
-					{{ site_data.contact.special.short }}
-			</a>
-	</li>
-</ul>
-<hr>
-
+<div class="panelSegment">
+	<div class="panelSegment__header">
+		<h2 class="panelSegmenet__title">04. contact</h2>
+	</div>
+	<section class="panelSegment__content">
+		{% include "lists/contact_me.njk" %}
+	</section>
+</div>

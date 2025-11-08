@@ -1,0 +1,17 @@
+<ul class="secondaryProjects">
+	{% for project in site_data.projects.secondary %}
+		<li class="secondaryProjects__entry">
+			<h3 class="secondaryProjects__name">
+				{{ project.name }}
+			</h3>
+			<p class="secondaryProjects__name">
+				{{ project.description }}
+			</p>
+			<ul class="tags">
+			{% for tag in project.tags %}
+				<li class="tags__entry">{{ tag }}</li>
+			{% endfor %}
+			</ul>
+		</li>
+	{% endfor %}
+</ul>
