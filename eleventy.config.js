@@ -63,16 +63,6 @@ export default async function (eleventyConfig) {
 	});
 
 	eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
-
-	// todo: fix this
-	//       currently using cdn which isn't great. maybe?
-
-	// eleventyConfig.addPlugin(pluginWebc, {
-	// 	components: [
-	// 		// "node_modules/hover-video-player/dist/hover-video-player.webc",
-	// 		"npm:hover-video-player/**/*.webc",
-	// 	],
-	// });
 };
 
 export const config = {

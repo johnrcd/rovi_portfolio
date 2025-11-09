@@ -4,14 +4,9 @@
 			<h3 class="mainProjects__name">
 				{{ project.name }}
 			</h3>
-			<hover-video-player>
-				<video src="{{ project.video }}" loop playsinline />
-				<img
-					src="/img/projects/{{ project.img }}"
-					class="paused-overlay"
-					slot="paused-overlay"
-				/>
-			</hover-video-player>
+			<img
+				src="/img/projects/{{ project.img }}"
+			/>
 			{% for paragraph in project.description %}
 				<p>{{ paragraph | safe }}</p>
 			{% endfor %}
