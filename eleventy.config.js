@@ -62,22 +62,6 @@ export default async function (eleventyConfig) {
 		return (new Date()).toISOString();
 	});
 
-	// MARKDOWN ANCHOR LOGIC
-
-	const markdownItOptions = {
-		html: true,
-	};
-
-	const markdownItAnchorOptions = {
-		permalink: markdownItAnchor.permalink.headerLink()
-	};
-
-	const markdownLib = markdownIt(markdownItOptions).use(
-		markdownItAnchor,
-		markdownItAnchorOptions
-	);
-
-	eleventyConfig.setLibrary("md", markdownLib);
 	eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
 
 	// todo: fix this
