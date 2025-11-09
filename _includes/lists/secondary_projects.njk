@@ -4,6 +4,15 @@
 			<h3 class="secondaryProjects__name">
 				{{ project.name }}
 			</h3>
+			<a
+				href="{{ project.link }}"
+				class="mainProjects__link"
+			>
+				<img
+					src="/img/projects/{{ project.img }}"
+					alt="{{ project.img }}"
+				/>
+			</a>
 			<p class="secondaryProjects__name">
 				{{ project.description }}
 			</p>

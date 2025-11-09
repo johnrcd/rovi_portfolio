@@ -33,7 +33,7 @@ projects:
         - "Full-stack web application that acts as a ticket tracker for my
           personal projects. Submit bug reports, request new features, or
           suggest new projects to work on."
-      img: rawr
+      img: taskboard.png
       alt: Taskboard website home page
       link: https://taskboard.rovidecena.com/
       tags:
@@ -45,21 +45,39 @@ projects:
     - name: Monospace
       description:
         - "2D platformer about a mouse trying to get home."
+      img: monospace.png
+      alt: Closeup of the player character in Monospace
       tags:
         - Unity
 
-    - name: Personal Blog
+    - name: rovi_blog
       description:
         - "Blog about projects I'm working on, typically related to programming,
           game development, music, or a combination thereof."
+      img: blog.png
+      alt: Post on my personal blog.
+      link: https://blog.rovidecena.com/
       tags:
-        - Eleventy/11ty
+        - Eleventy
 
     - name: ULTRAVIOLET
       description:
         - "Website for ULTRAVIOLET, a band that I'm in."
+      img: ultraviolet.png
+      alt: ULTRAVIOLET band logo
+      link: https://ultravioletspace.com/
       tags:
-        - Eleventy/11ty
+        - Eleventy
+
+    - name: Arcfest II
+      description:
+        - "Fast-paced fighter where you fight to stay inside a constantly
+          shrinking safe zone."
+      img: arcfest.png
+      alt: Two of the player characters (spaceships) facing towards
+        each other, each firing missles.
+      tags:
+        - Unity
 
 contact:
   links:

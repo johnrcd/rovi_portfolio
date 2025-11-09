@@ -62,7 +62,7 @@ hr {
 #content {
 	max-width: 80ch;
 	margin: 2rem auto;
-	padding: 1rem;
+	/* padding: 1rem; */
 
 	display: flex;
 	flex-direction: column;
@@ -138,13 +138,13 @@ hr {
 }
 
 .mainProjects__link {
-	filter: saturate(0);
+	filter: saturate(0) brightness(0.8);
 	transition: 0.2s;
 }
 
 .mainProjects__link:hover,
 .mainProjects__link:focus {
-	filter: saturate(1);
+	filter: saturate(1) brightness(1);
 }
 .contact__space {
 	visibility: hidden;
@@ -155,10 +155,11 @@ hr {
 	flex-direction: row;
 	gap: 1rem;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .secondaryProjects__entry {
-	width: 44%;
+	flex: 0.5;
 	min-width: 40%;
 }
 
