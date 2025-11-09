@@ -1,14 +1,14 @@
-<ul class="mainProjects">
+<ul class="projects">
 	{% for project in site_data.projects.main %}
-		<li class="mainProjects__entry">
-			<h3 class="mainProjects__name">
+		<li class="projects__entry">
+			<h3 class="projects__name">
 				{{ project.name }}
 			</h3>
 
 			{% if project.video %}
 				<a
 					href="{{ project.link }}"
-					class="mainProjects__link"
+					class="projects__link"
 				>
 					<hover-video-player>
 						<video src="{{ project.video }}" loop muted playsinline />
@@ -23,7 +23,7 @@
 			{% else %}
 				<a
 					href="{{ project.link }}"
-					class="mainProjects__link"
+					class="projects__link"
 				>
 					<img
 						src="/img/projects/{{ project.img }}"

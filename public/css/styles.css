@@ -1,41 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-	/* font-family: "Lexend Exa", sans-serif; */
-	/* font-weight: 400; */
-	font-optical-sizing: auto;
-	font-style: normal;
-}
-
-/* i hate everything */
-/* h1, h2, h3, h4, h5, h6, p, li {
-	margin: 0;
-	padding: 0;
-} */
-
-h2, h3, p, li {
-	font-size: 16px;
-}
-
 :root {
-	--font-family: "Manrope", "Poppins", "Open Sans", sans-serif;
-	--color-text-title: #FFFFFF;
-	--color-text-header: #B9E7E9;
-	--color-text-support: #85A7A8;
-	--color-text: #F2F7F7;
-	--svg-filter: invert(97%) sepia(3%) saturate(54%) hue-rotate(165deg) brightness(116%) contrast(76%);
-	--color-bg: linear-gradient(233deg, rgba(1,2,8,1) 0%, rgba(4,14,24,1) 11%, rgba(5,17,19,1) 33%, rgba(6,16,24,1) 48%, rgba(6,12,20,1) 67%, rgba(6,9,22,1) 87%, rgba(3,9,22,1) 100%);
-	--color-bg-header: rgba(0, 0, 0, 0);
+	--font-family: "MS PMincho", monospace;
+	--color-text: #EEE;
+	--color-background: #111;
+	--color-support: #888;
+	--color-accent: #0EE;
 
-	--selection-text: #000000;
-	--selection-bg: rgb(122, 255, 252);
+	--selection-text: #000;
+	--selection-background: #0EE;
 
-	--glass-bg: rgba(255, 255, 255, 0.02);
-
-	--load-time: 0.4s;
-	--stagger-time: 0.1s;
-
-	line-height: 1.1rem;
+	line-height: 1.25rem;
 	font-weight: 400;
 	word-wrap: break-word;
 
@@ -49,24 +22,43 @@ h2, h3, p, li {
 	font-variation-settings: "wdth" 100;
 }
 
+* {
+	font-weight: 400;
+}
+
+body {
+	font-family: var(--font-family);
+	color: var(--color-text);
+	background: var(--color-background);
+}
+
+a {
+	color: var(--color-text);
+}
+
+a:hover,
+a:focus {
+	color:var(--color-accent);
+}
+
+
 hr {
 	/* https://usgraphics.com/ */
 	background: radial-gradient(#777 .5px, transparent 1px) 0 0 / 3px 3px, transparent;
 	border: none;
 	height: 1rem;
 	max-height: 1rem;
-	/* margin-bottom: 2rem; */
-	margin: 1rem 0;
+	margin: 2rem 0;
+}
+
+h1 {
+	margin: 0.25rem 0;
+	margin-top: 0;
 }
 
 #content {
 	max-width: 80ch;
-	margin: 2rem auto;
-	/* padding: 1rem; */
-
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
+	margin: 3rem auto;
 }
 
 .header {
@@ -76,15 +68,18 @@ hr {
 		margin-bottom: 0.75rem;
 	}
 	.header__subtitle {
-
+		margin: 0;
 	}
 
-.aboutMe > *:not(:last-child) {
-	margin-bottom: 1rem;
+.aboutMe__paragraph:first-child {
+	margin-top: 0;
 }
 
-.mainProjects,
-.secondaryProjects,
+.aboutMe__paragraph:last-child {
+	margin-bottom: 0;
+}
+
+.projects,
 .contact {
 	list-style-type: none;
 	list-style-position: inside;
@@ -98,6 +93,8 @@ hr {
 }
 	.panelSegment + .panelSegment {
 		margin-top: 2rem;
+		padding-top: 2rem;
+		border-top: 1px dotted var(--color-support);
 	}
 	.panelSegment__header {
 		flex: none;
@@ -116,41 +113,29 @@ hr {
 
 	}
 
-.mainProjects__entry,
-.secondaryProjects__entry {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
+.projects__entry:not(:last-child) {
+	margin-bottom: 2rem;
 }
 
-.mainProjects__entry:not(:last-child) ,
-.secondaryProjects__entry:not(:last-child) {
-	margin-bottom: 1rem;
+.projects__name {
+	margin: 1rem 0;
+	margin-top: 0;
 }
 
-.aboutMe > *:not(:last-child) {
-	margin-bottom: 1rem;
-}
-
-.mainProjects__entry > *,
-.secondaryProjects__entry > * {
-	margin: 0;
-}
-
-.mainProjects__link {
+.projects__link {
 	filter: saturate(0) brightness(0.8);
 	transition: 0.2s;
 }
 
-.mainProjects__link:hover,
-.mainProjects__link:focus {
+.projects__link:hover,
+.projects__link:focus {
 	filter: saturate(1) brightness(1);
 }
 .contact__space {
 	visibility: hidden;
 }
 
-.secondaryProjects {
+.projects.projects--secondary {
 	display: flex;
 	flex-direction: row;
 	gap: 1rem;
@@ -158,7 +143,7 @@ hr {
 	justify-content: space-between;
 }
 
-.secondaryProjects__entry {
+.projects--secondary .projects__entry {
 	flex: 0.5;
 	min-width: 40%;
 }
@@ -171,9 +156,9 @@ hr {
 }
 
 	.tags__entry {
-		border: 1px solid black;
+		border: 1px solid var(--color-text);
 		padding: 2px 3px;
-		box-shadow: 2px 2px #BBB;
+		box-shadow: 2px 2px var(--color-support);
 	}
 
 /* hover-video-player:not(:defined) {

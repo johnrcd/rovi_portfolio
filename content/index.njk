@@ -21,7 +21,7 @@ title: test
 	</div>
 	<section class="panelSegment__content aboutMe">
 		{% for paragraph in site_data.about %}
-			<p>{{ paragraph | safe }}</p>
+			<p class="aboutMe__paragraph">{{ paragraph | safe }}</p>
 		{% endfor %}
 	</section>
 </div>

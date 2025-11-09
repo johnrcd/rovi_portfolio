@@ -1,7 +1,7 @@
-<ul class="secondaryProjects">
+<ul class="projects projects--secondary">
 	{% for project in site_data.projects.secondary %}
-		<li class="secondaryProjects__entry">
-			<h3 class="secondaryProjects__name">
+		<li class="projects__entry">
+			<h3 class="projects__name">
 				{{ project.name }}
 			</h3>
 			<a
@@ -13,7 +13,7 @@
 					alt="{{ project.img }}"
 				/>
 			</a>
-			<p class="secondaryProjects__name">
+			<p class="projects__name">
 				{{ project.description }}
 			</p>
 			<ul class="tags">
