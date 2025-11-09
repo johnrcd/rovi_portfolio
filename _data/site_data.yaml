@@ -18,6 +18,9 @@ projects:
       description:
         - "MIDI-based audio visualizer that generates graphics in real-time.
           Runs as a website, able to run directly on the web."
+        - (click image for audio)
+      video: /video/projects/lume_glowingSnow.mp4
+      img: lume_glowingSnow.png
       tags:
         - TypeScript
         - Vite

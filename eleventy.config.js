@@ -3,14 +3,15 @@ import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
+import pluginWebc from "@11ty/eleventy-plugin-webc";
 
 import YAML from "yaml";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-export default async function(eleventyConfig) {
+export default async function (eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
 	});
@@ -78,6 +79,16 @@ export default async function(eleventyConfig) {
 
 	eleventyConfig.setLibrary("md", markdownLib);
 	eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
+
+	// todo: fix this
+	//       currently using cdn which isn't great. maybe?
+
+	// eleventyConfig.addPlugin(pluginWebc, {
+	// 	components: [
+	// 		// "node_modules/hover-video-player/dist/hover-video-player.webc",
+	// 		"npm:hover-video-player/**/*.webc",
+	// 	],
+	// });
 };
 
 export const config = {
