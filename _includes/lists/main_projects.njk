@@ -4,9 +4,34 @@
 			<h3 class="mainProjects__name">
 				{{ project.name }}
 			</h3>
-			<img
-				src="/img/projects/{{ project.img }}"
-			/>
+
+			{% if project.video %}
+				<a
+					href="{{ project.link }}"
+					class="mainProjects__link"
+				>
+					<hover-video-player>
+						<video src="{{ project.video }}" loop muted playsinline />
+						<img
+							src="/img/projects/{{ project.img }}"
+							alt="{{ project.img }}"
+							class="paused-overlay"
+							slot="paused-overlay"
+						/>
+					</hover-video-player>
+				</a>
+			{% else %}
+				<a
+					href="{{ project.link }}"
+					class="mainProjects__link"
+				>
+					<img
+						src="/img/projects/{{ project.img }}"
+						alt="{{ project.img }}"
+					/>
+				</a>
+			{% endif %}
+
 			{% for paragraph in project.description %}
 				<p>{{ paragraph | safe }}</p>
 			{% endfor %}

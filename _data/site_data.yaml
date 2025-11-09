@@ -18,9 +18,10 @@ projects:
       description:
         - "MIDI-based audio visualizer that generates graphics in real-time.
           Runs as a website, able to run directly on the web."
-        - (click image for audio)
-      video: /video/projects/lume_glowingSnow.mp4
       img: lume_glowingSnow.png
+      alt: Lume example
+      link: https://www.youtube.com/watch?v=-ML9xjx_3I8&list=PLu5ZBi46blCLJZnpxVVIUcqzb_J1fL4R9
+      video: /video/lume_glowingSnow.mp4
       tags:
         - TypeScript
         - Vite
@@ -32,6 +33,9 @@ projects:
         - "Full-stack web application that acts as a ticket tracker for my
           personal projects. Submit bug reports, request new features, or
           suggest new projects to work on."
+      img: rawr
+      alt: Taskboard website home page
+      link: https://taskboard.rovidecena.com/
       tags:
         - React
         - Django (DRF)

@@ -136,6 +136,16 @@ hr {
 .secondaryProjects__entry > * {
 	margin: 0;
 }
+
+.mainProjects__link {
+	filter: saturate(0);
+	transition: 0.2s;
+}
+
+.mainProjects__link:hover,
+.mainProjects__link:focus {
+	filter: saturate(1);
+}
 .contact__space {
 	visibility: hidden;
 }
