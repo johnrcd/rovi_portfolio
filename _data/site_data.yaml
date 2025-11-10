@@ -82,22 +82,18 @@ projects:
 contact:
   links:
     - name: Email
-      long: johnrcd.ar@gmail.com
       short: johnrcd.ar@gmail.com
       url: mailto:johnrcd.ar@gmail.com
 
     - name: LinkedIn
-      long: linkedin.com/in/rovi-decena/
       short: /in/rovi-decena/
       url: https://www.linkedin.com/in/rovi-decena/
 
     - name: Bluesky
-      long: bsky.app/profile/rovidecena.com
       short: "@rovidecena.com"
       url: https://bsky.app/profile/rovidecena.com
 
   special:
     name: All Links
-    long: linktr.ee/johnrcd
     short: linktr.ee/johnrcd
     url: https://linktr.ee/johnrcd

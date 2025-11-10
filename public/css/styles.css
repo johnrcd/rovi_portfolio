@@ -131,6 +131,10 @@ h1 {
 .projects__link:focus {
 	filter: saturate(1) brightness(1);
 }
+
+.projects__paragraph {
+	margin: 1rem 0;
+}
 .contact__space {
 	visibility: hidden;
 }
