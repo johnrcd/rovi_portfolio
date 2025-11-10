@@ -1,12 +1,12 @@
 {
-	"title": "Eleventy PagesCMS Project Template",
+	"title": "Rovi Decena",
 	"short_title": "11ty/PagesCMS Base",
-	"url": "https://example.com/",
+	"url": "https://rovidecena.com",
 	"language": "en",
-	"description": "Project Template for a static site built with Eleventy and Paper CMS.",
+	"description": "Rovi Decena's portfolio website.",
 	"author": {
 		"name": "Rovi Decena",
 		"email": "johnrcd.ar@gmail.com",
-		"url": "https://rovidecena.com/"
+		"url": "https://rovidecena.com"
 	}
 }
