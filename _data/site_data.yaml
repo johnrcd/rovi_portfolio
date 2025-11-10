@@ -47,6 +47,7 @@ projects:
         - "2D platformer about a mouse trying to get home."
       img: monospace.png
       alt: Closeup of the player character in Monospace
+      video: /video/monospace.mp4
       tags:
         - Unity
 
