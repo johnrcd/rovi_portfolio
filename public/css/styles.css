@@ -62,7 +62,8 @@ h2, h3, p {
 
 #content {
 	max-width: 80ch;
-	margin: 3rem auto;
+	margin: 1rem auto;
+	padding: 1rem;
 }
 
 .header {
@@ -127,6 +128,10 @@ h2, h3, p {
 
 	}
 
+.projects__entry {
+	position: relative;
+}
+
 .projects__entry:not(:last-child) {
 	margin-bottom: 2rem;
 }
@@ -143,12 +148,34 @@ h2, h3, p {
 
 .projects__link:hover,
 .projects__link:focus {
+	transition: 0.2s;
 	filter: saturate(1) brightness(1);
+}
+
+.projects__hoverMessage {
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 0.25rem;
+	padding: 0.25rem;
+	user-select: none;
+	pointer-events: none;
+	opacity: 1;
+	transition: 0.2s;
+	background: var(--color-background);
+}
+
+.projects__link:hover .projects__hoverMessage,
+.projects__link:focus .projects__hoverMessage {
+	transition: 0.2s;
+	opacity: 0;
 }
 
 .projects__paragraph {
 	margin: 1rem 0;
 }
+
 .contact__space {
 	visibility: hidden;
 }
@@ -190,4 +217,39 @@ hover-video-player, video, img {
 
 p {
 	/* margin: 0; */
+}
+
+.markdown h1 {
+	font-size: 3rem;
+	padding: 1rem;
+	/* margin: 1rem; */
+	border: 1px solid var(--color-text);
+	box-shadow: 2px 2px var(--color-support);
+}
+
+.markdown h2 {
+	font-size: 2rem;
+	display: block;
+	border-bottom: 1px dotted var(--color-support);
+	padding-bottom: 0.5rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+.markdown p > code {
+	--c: lch(from var(--color-support) calc(l - 35) c h);
+	background: var(--c);
+	outline: 0.125rem solid var(--c);
+}
+
+.markdown pre {
+	border: 1px solid var(--color-support);
+	padding: 1rem;
+	tab-size: 2;
+	overflow: auto;
+}
+
+.markdown iframe {
+	margin: 1rem auto;
+	display: block;
 }

@@ -22,6 +22,7 @@ projects:
       alt: Lume example
       link: https://www.youtube.com/watch?v=-ML9xjx_3I8&list=PLu5ZBi46blCLJZnpxVVIUcqzb_J1fL4R9
       video: /video/lume_glowingSnow.mp4
+      learn_more: /lume/
       tags:
         - TypeScript
         - Vite

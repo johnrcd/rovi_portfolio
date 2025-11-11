@@ -8,7 +8,7 @@
 			{% if project.video %}
 				<a
 					href="{{ project.link }}"
-					class="projects__link"
+					class="projects__link projects__link--hoverable"
 				>
 					<hover-video-player>
 						<video src="{{ project.video }}" loop muted playsinline />
@@ -19,6 +19,7 @@
 							slot="paused-overlay"
 						/>
 					</hover-video-player>
+					<p class="projects__hoverMessage">hover me!</p>
 				</a>
 			{% else %}
 				<a
@@ -35,6 +36,15 @@
 			{% for paragraph in project.description %}
 				<p>{{ paragraph | safe }}</p>
 			{% endfor %}
+			{% if project.learn_more %}
+				<p>
+					<a
+						href="{{ project.learn_more }}"
+					>
+						learn more
+					</a>
+				</p>
+			{% endif %}
 			<ul class="tags">
 			{% for tag in project.tags %}
 				<li class="tags__entry">{{ tag }}</li>

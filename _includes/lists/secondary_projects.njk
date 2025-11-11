@@ -7,7 +7,7 @@
 			{% if project.video %}
 				<a
 					href="{{ project.link }}"
-					class="projects__link"
+					class="projects__link projects__link--hoverable"
 				>
 					<hover-video-player>
 						<video
@@ -24,6 +24,7 @@
 							slot="paused-overlay"
 						/>
 					</hover-video-player>
+					<p class="projects__hoverMessage">hover me!</p>
 				</a>
 			{% else %}
 				<a
