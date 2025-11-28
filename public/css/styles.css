@@ -252,4 +252,6 @@ p {
 .markdown iframe {
 	margin: 1rem auto;
 	display: block;
+	max-width: 100%;
 }
+
