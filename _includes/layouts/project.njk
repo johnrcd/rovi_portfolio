@@ -3,11 +3,10 @@ layout: layouts/home.njk
 ---
 
 <main class="markdown">
-
-	<h1>{{ title }}</h1>
-	<a href="/">return to home page</a>
-
-	<hr />
+	<div class="postHeader">
+		<h1 class="postHeader__title">{{ title }}</h1>
+		<a  class="postHeader__link" href="/">return to home page</a>
+	</div>
 
 	{{ content | safe }}
 

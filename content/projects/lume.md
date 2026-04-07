@@ -2,9 +2,15 @@
 title: Lume
 ---
 
-Lume is a MIDI-based audio visualizer that renders graphics in real time. It's powered by p5.js, an open-source graphics library that allows it to run directly on your browser.
+Lume is a MIDI-based audio visualizer that renders graphics in real time. It's powered by p5.js, an open-source graphics library that allows it to run directly on a browser.
 
-Currently, Lume is a private project meant for personal use.
+## showcase
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/y13ibn8Lwjo?si=ia9YLvxVtLZxmYdT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tdfniKb3-Ic?si=bNG9fHdaSRhIFall" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-ML9xjx_3I8?si=A5RyVKDhD17ZHYs9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## how does it work?
 
@@ -14,21 +20,11 @@ The reactive part of Lume — what allows it to respond to MIDI data — is done
 
 Each frame, Lume processes the raw information from its MIDI player into a format understandable by `Graphic` components, gives each of them the information they need, and calls all of their `draw()` functions.
 
-## examples
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/y13ibn8Lwjo?si=ia9YLvxVtLZxmYdT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tdfniKb3-Ic?si=bNG9fHdaSRhIFall" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-ML9xjx_3I8?si=A5RyVKDhD17ZHYs9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## status
 
-As mentioned, Lume is a private project, and is not open for outside use or contributions. This is mainly because Lume is not stable enough to be used by non-developers.
+Lume is a private project, and is not open for outside use or contributions. This is partially because Lume is not actually an application, but a website that I run locally.
 
-To run Lume currently, you need direct access to the code (which is not public), and have the knowledge to run it locally — using npm, setting up enviornmental variables.
-
-Ideally, Lume would be ported to Electron or some other JavaScript framework that would allow it to be ran as a standalone application, but my priorites are focused on adding new layouts (and other projects).
+I have made attempts to turn Lume into a fully-fleged desktop application, but gave up due to lack of time, plus focus on other projects. I have considered making a real-time Lume player that can read MIDI inputs directly from the user, but that also ended up being out of my scope.
 
 ## development history
 

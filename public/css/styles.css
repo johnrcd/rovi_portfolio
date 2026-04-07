@@ -1,14 +1,26 @@
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
-	--font-family: "MS PMincho", monospace;
-	--color-text: #EEE;
-	--color-background: #111;
-	--color-support: #888;
-	--color-accent: #0EE;
+	--font-family: Manrope;
+	--color-text: rgb(242, 247, 247);
+	--color-background: linear-gradient(233deg, rgba(1,2,8,1) 0%, rgba(4,14,24,1) 11%, rgba(5,17,19,1) 33%, rgba(6,16,24,1) 48%, rgba(6,12,20,1) 67%, rgba(6,9,22,1) 87%, rgba(3,9,22,1) 100%);
+	--color-support: rgba(165, 191, 191, 0.5);
+	--color-support-support: rgba(165, 191, 191, 0.5);
+	--color-text-secondary: rgb(197, 211, 211);
 
 	--selection-text: #000;
 	--selection-background: #0EE;
 
-	line-height: 1.25rem;
+	--glass-bg: rgba(255, 255, 255, 0.02);
+
+	line-height: 1.5rem;
 	font-weight: 400;
 	word-wrap: break-word;
 
@@ -38,7 +50,7 @@ a {
 
 a:hover,
 a:focus {
-	color:var(--color-accent);
+	color:var(--color-text-secondary);
 }
 
 
@@ -54,6 +66,8 @@ hr {
 h1 {
 	margin: 0.25rem 0;
 	margin-top: 0;
+	font-weight: 700;
+	font-size: 2.5rem;
 }
 
 h2, h3, p {
@@ -61,9 +75,33 @@ h2, h3, p {
 }
 
 #content {
-	max-width: 80ch;
-	margin: 1rem auto;
-	padding: 1rem;
+	max-width: 67ch;
+	margin: 3rem auto;
+	padding: 2rem;
+
+	background: var(--glass-bg);
+	border-radius: 16px;
+	box-shadow: 0 4px 16px rgba(0, 25, 50, 0.3);
+	backdrop-filter: blur(3.3px);
+	-webkit-backdrop-filter: blur(3.3px);
+	border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+@media screen and (max-width: 640px) {
+	#content {
+		margin: 0;
+		max-width: 100%;
+	}
+}
+
+.particles {
+	position: fixed;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: -10;
 }
 
 .header {
@@ -71,9 +109,11 @@ h2, h3, p {
 }
 	.header__title {
 		margin-bottom: 0.75rem;
+		margin-top: 0.5rem;
 	}
 	.header__subtitle {
 		margin: 0;
+		color: var(--color-text-secondary);
 	}
 
 .aboutMe__paragraph:first-child {
@@ -101,15 +141,16 @@ h2, h3, p {
 		flex-direction: column;
 	}
 }
-	.panelSegment + .panelSegment {
-		margin-top: 2rem;
-		padding-top: 2rem;
-		border-top: 1px dotted var(--color-support);
+	.panelSegment {
+		margin-top: 1.5rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--color-support);
 	}
 	.panelSegment__header {
 		flex: none;
-		width: 22ch;
-		max-width: 22ch;
+		width: 19ch;
+		max-width: 19ch;
+		color: var(--color-text-secondary);
 	}
 
 	@media screen and (max-width: 960px) {
@@ -201,9 +242,10 @@ h2, h3, p {
 }
 
 	.tags__entry {
-		border: 1px solid var(--color-text);
+		color: var(--color-text-secondary);
+		border: 1px solid var(--color-support);
 		padding: 2px 3px;
-		box-shadow: 2px 2px var(--color-support);
+		box-shadow: 2px 2px var(--color-support-support);
 	}
 
 /* hover-video-player:not(:defined) {
@@ -220,11 +262,11 @@ p {
 }
 
 .markdown h1 {
-	font-size: 3rem;
-	padding: 1rem;
+	font-size: 2.5rem;
+	/* padding: 1rem; */
 	/* margin: 1rem; */
-	border: 1px solid var(--color-text);
-	box-shadow: 2px 2px var(--color-support);
+	/* border: 1px solid var(--color-text); */
+	/* box-shadow: 2px 2px var(--color-support); */
 }
 
 .markdown h2 {
@@ -253,5 +295,27 @@ p {
 	margin: 1rem auto;
 	display: block;
 	max-width: 100%;
+}
+
+.postHeader {
+	border-bottom: 2px solid var(--color-support);
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+
+	display: flex;
+	align-items: bottom;
+	justify-content: space-between;
+}
+
+.postHeader__link {
+	text-decoration: none;
+	color: var(--color-text-secondary);
+}
+
+@media screen and (max-width: 640px) {
+	.postHeader {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
 }
 

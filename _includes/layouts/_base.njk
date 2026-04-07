@@ -3,15 +3,19 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>
-			{{ metadata.title or title }}
-		</title>
+		<title>{{ metadata.title or title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+
 		{% css %}
 			{% include "public/css/__reset.css" %}
 			{% include "public/css/styles.css" %}
 		{% endcss %}
+
+		{% js %}
+			{% include "public/js/particles.js" %}
+			{% include "public/js/start.js" %}
+		{% endjs %}
 
 		<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
@@ -19,9 +23,10 @@
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<div>{{ content | safe }}</div>
+		<canvas class="particles"></canvas>
 	</body>
 </html>
